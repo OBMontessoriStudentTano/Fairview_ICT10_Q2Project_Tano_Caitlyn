@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2 Skills Test</title>
+    <link rel="stylesheet" 
+    href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" 
+    src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+</head>
+ <style>
+
+        /* Main Webpage */
+        body {
+            font-family:'Poppins', sans-serif;
+            background-color: #008080;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 30px 0;
+            min-height: 100vh;
+            box-sizing: border-box;
+            text-align: center;
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Header */
+        .header {
+            width: 1000px;
+            max-width: 95%;
+            min-height: auto;
+            margin: 0 auto;
+            background-color: rgba(225,228,196,0.75);
+            padding: 15px 30px;
+            border-radius: 12px;
+            box-shadow: 0px 5px 20px rgba(0,0,0,0.20);
+            box-sizing: border-box;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Main Heading */
+        h2 {
+            color: #002147;
+            margin-bottom: 5px;
+            font-size: 32px;
+            letter-spacing: 1px;
+        }
+
+        /* Input */
+        input {
+            width: 90%;
+            max-width: 450px;
+            min-height: 55px;
+            padding: 15px 18px;
+            margin: 12px 0;
+            background-color: bisque;
+            border: 1px solid wheat;
+            border-bottom: 2px solid whitesmoke;
+            border-radius: 8px;
+            font-size: 16px;
+            color: #25302d;
+            box-sizing: border-box;
+        }
+
+        /* Input border when selected */
+        input:focus {
+            outline: none;
+            border: 2px solid beige
+        }
+
+        /* Submit button */
+        button {
+            margin-top: 15px;
+            padding: 12px 35px;
+            background-color: #002147;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            letter-spacing: 1px;
+        }
+
+        /* Submit button changes color when hovered */
+        button:hover {
+            background-color: #000080;
+        }
+
+        /* Give the element details */
+        #details {
+            width: 90%;
+            max-width: 600px;
+            margin: 25px auto;
+            padding: 25px;
+            background-color: #b5f5b3;
+            border: 3px solid #6e916d;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            text-align: left;
+            line-height: 2;
+            box-sizing: border-box;
+        }
+
+        #details h2{
+            margin: 0 0 15px;
+            padding-bottom: 10px;
+            background-color: #b5f5b3;
+            color: #002147;
+            border: none;
+            border-radius: 10px;
+            text-align:center;
+            font-size: 24px;
+        }
+
+        #details p{
+            margin: 12px 0;
+            font-size: 18px;
+        }
+
+    </style>
+<body>
+
+    <div class="header">
+    <h2>Periodic Table Information Finder (Non-metals)</h2>
+    </div>
+    <br><br>
+
+     <!--Input box for the element symbol-->
+    <input type="text" id="text1" placeholder="Enter your Element Symbol">
+    <br><br>
+
+    <!--Check Button-->
+    <button type="button" py-click="enter">Check Details</button>
+    <br><br>
+
+     <!--Details display area-->
+    <div id="details" class="details">
+        <h3>Element Details</h3>
+    </div>
+
+    <!--Connect the HTML webpage to the Python-->
+    <script type="py" src="04_elements.py"></script>
+    
+</body>
+</html>
