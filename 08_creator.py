@@ -57,20 +57,6 @@ quotes = [
     "Fire is cathing, and if we burn, you burn with us! - Katniss Everdeen"
 ]
 
-about_output = ""
-
-for key, value in about_me.items():
-    about_output += f"<div class='info><b>{key}:</b> {value}</div>"
-
-document.getElementById("about-me").innerHTML = about_output
-
-me_output = ""
-
-for detail in personal_details:
-    abome_output += f"<li>{detail}</li>"
-
-document.getElementById("me").innerHTML = about_output
-
 hobby_output = ""
 
 for hobby in interests_hobbies:
@@ -87,8 +73,8 @@ document.getElementById("dreams").innerHTML = dream_output
 
 favorite_output = ""
 
-for key, value in favorite.items():
-    favorite_output += f"<li><b>{key}:</b>{value}</li>"
+for key, value in favorites.items():
+    favorite_output += f"<div class='info'><b>{key}:</b>{value}</div>"
 
 document.getElementById("favorites").innerHTML = favorite_output
 
@@ -98,6 +84,13 @@ for activity in sorted(favorite_activities):
     activity_output += f"<li>{activity}</li>"
 
 document.getElementById("activities").innerHTML = activity_output
+
+about_output = ""
+
+for key, value in about_me.items():
+    about_output += f"<div class='info'><b>{key}:</b> {value}</div>"
+
+document.getElementById("about-me").innerHTML = about_output
 
 quote_output = ""
 
