@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,7 +11,6 @@
     
      <style>
 
-        /* Main Webpage */
         body {
             font-family: Georgia, 'Times New Roman', Times, serif;
             background-image: url(https://i.pinimg.com/736x/68/46/bd/6846bdb097e410e13c9ffe794c928814.jpg);
@@ -19,31 +18,59 @@
             background-position: center;
             background-attachment: fixed;
             margin: 0;
-            padding: 30px 0;
+            padding: 0;
             min-height: 100vh;
             box-sizing: border-box;
             text-align: center;
-
             display: flex;
-            justify-content: center;
-            align-items: center;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: stretch;
         }
 
-        /* Add New Members Box */
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            gap: 25px;
+            align-items: center;
+            flex-direction: row;
+            width: 100%;
+            padding: 10px 20px;
+            justify-content: flex-end;
+            margin: 0;
+            background-color: rgba(225,228,196,0.75);
+            box-sizing: border-box;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #25301f;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 10px;
+            white-space: nowrap;
+        }
+
+        .navbar a:hover {
+            color: white;
+            border-radius: 10px;
+        }
+
         .add {
             width: 850px;
             max-width: 90%;
             min-height: 350px;
-            margin: auto;
+            margin: 30px auto;
             background-color: rgba(225,228,196,0.75);
             padding: 45px;
             border-radius: 20px;
             box-shadow: 0px 5px 20px rgba(0,0,0,0.20);
             box-sizing: border-box;
             backdrop-filter: blur(5px);
+            align-self: center;
         }
 
-        /* Main Heading */
         h1 {
             color: #25301f;
             margin-bottom: 5px;
@@ -51,7 +78,6 @@
             letter-spacing: 1px;
         }
 
-        /* Subheading above the member list */
         h2 {
             color: #20301f;
             font-weight: normal;
@@ -61,7 +87,6 @@
             font-size: 16px;
         }
 
-        /* Input */
         input {
             width: 90%;
             padding: 12px;
@@ -74,13 +99,11 @@
             color: #2a3025
         }
 
-        /* Input border when selected */
         input:focus {
             outline: none;
             border: 2px solid #6aa332
         }
 
-        /* Submit button */
         button {
             margin-top: 15px;
             padding: 12px 35px;
@@ -93,12 +116,10 @@
             letter-spacing: 1px;
         }
 
-        /* Submit button changes color when hovered */
         button:hover {
             background-color: #a3325d;
         }
 
-        /* Give the message */
         #message {
             margin-top: 25px;
             font-size: 16px;
@@ -106,14 +127,12 @@
             line-height: 1.5;
         }
 
-        /* Give the ordered list of members */
         #members {
             text-align: left;
             line-height: 1.8;
             color: #301f28
         }
 
-        /* Displays the total number of members */
         #members p {
             text-align: center;
             margin-top: 20px;
@@ -125,41 +144,39 @@
 </head>
 <body>
 
-    <!--Main container-->
+    <nav class="navbar">
+        <a href="01_homepage.html">Homepage</a>
+        <a href="03_elements.html">Element Checker</a>
+        <a href="07_creator.html">Meet the Creator</a>
+    </nav>
+
+    <br><br><br><br>
+
      <div class="add">
-    
-    <!--Main title-->
+
     <h1>Add New Communication Arts Club Members</h1>
     <br>
 
-    <!--Input box for the first name-->
     <input type="text" id="text1" placeholder="Enter your first name">
     <br>
 
-    <!--Input box for the last name-->
     <input type="text" id="text2" placeholder="Enter your last name">
     <br><br>
 
-    <!--Submit Button-->
     <button type="button" py-click="enter">Submit</button>
     <br>
-    
-    <!--Error message-->
+
     <p id="message"></p>
 
-    <!--List of Members-->
     <div id="box" style="display: none;">
 
-        <!--Heading of the list of registered members-->
         <h2>List of Members</h2>
         
-        <!--Total number of members-->
         <div id="members"></div>
     </div>
 
     </div>
 
-    <!--Connect the webpage to the Python ordering program-->
     <script type="py" src="06_members.py"></script>
     
 </body>

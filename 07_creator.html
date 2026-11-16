@@ -7,14 +7,63 @@
     <link rel="stylesheet" href="https://pyscript.net/releases/2024.3.1/core.css" />
     <script type="module" src="https://pyscript.net/releases/2024.3.1/core.js"></script>
     <style>
+
+        body {
+            background-image: url(https://i.pinimg.com/736x/9a/19/5c/9a195c2f5a61bb0fb6708eb7200dd88f.jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            box-sizing: border-box;
+            text-align: center;
+            display: flex;
+            justify-content: flex-start;
+            align-items: stretch;
+            flex-direction: column;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            gap: 25px;
+            align-items: center;
+            flex-direction: row;
+            width: 100%;
+            padding: 10px 20px;
+            justify-content: flex-end;
+            margin: 0;
+            background-color: #6e0101;
+            box-sizing: border-box;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #ad718a;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 10px;
+            white-space: nowrap;
+        }
+
+        .navbar a:hover {
+            color: white;
+            border-radius: 10px;
+        }
+
         .holder {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 30px 15px;
-            background-image: url(https://i.pinimg.com/736x/9a/19/5c/9a195c2f5a61bb0fb6708eb7200dd88f.jpg);
+            width: 95%;
+            max-width: 1100px;
+            padding: 15px 30px;
+            background-color: #6e0101;
             border-radius: 15px;
-            margin: 25px 0;
+            margin: 15px auto;
+            box-sizing: border-box;
         }
 
         .holder h1 {
@@ -34,8 +83,14 @@
 
         #letter p {
             font-family: Georgia, 'Times New Roman', Times, serif;
-            color: #d98fae;
+            color: #ad718a;
             font-size: 16px;
+            margin-bottom: 18px;
+        }
+
+         #letter ul {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #ad718a;
             margin-bottom: 18px;
         }
 
@@ -46,9 +101,23 @@
             width: 100%;
             gap: 25px;
         }
+
+        #quotes {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #ad718a;
+            margin-bottom: 18px;
+        }
     </style>
 </head>
 <body>
+
+    <nav class="navbar">
+        <a href="01_homepage.html">Homepage</a>
+        <a href="03_elements.html">Element Checker</a>
+        <a href="05_members.html">School Club Members</a>
+    </nav>
+
+    <br><br><br><br>
 
     <div class="holder">
     
@@ -56,7 +125,7 @@
     <h1>Hi, I'm Caitlyn Tano</h1>
     </header>
     
-    <div class="letter">
+    <div id="letter">
         <h2>Info about Me:</h2>
     </div>
 
@@ -73,7 +142,7 @@
         </div>
 
         <div id="letter">
-            <h2>My FavoritesL</h2>
+            <h2>My Favorites</h2>
             <ul id="favorites"></ul>
         </div>
 

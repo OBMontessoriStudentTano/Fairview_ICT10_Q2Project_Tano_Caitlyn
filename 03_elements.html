@@ -11,7 +11,6 @@
 </head>
  <style>
 
-        /* Main Webpage */
         body {
             font-family:'Poppins', sans-serif;
             background-color: #008080;
@@ -19,18 +18,44 @@
             background-position: center;
             background-attachment: fixed;
             margin: 0;
-            padding: 30px 0;
+            padding: 0;
             min-height: 100vh;
             box-sizing: border-box;
             text-align: center;
-            
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
         }
 
-        /* Header */
+        .navbar {
+            display: flex;
+            justify-content: flex-end;
+            gap: 25px;
+            align-items: center;
+            width: 100%;
+            min-height: 55px;
+            padding: 5px 20px;
+            background-color: rgba(225,228,196,0.75);
+            box-sizing: border-box;
+            flex-shrink: 0;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #002147;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 10px;
+            white-space: nowrap;
+        }
+
+        .navbar a:hover {
+            color: white;
+            border-radius: 10px;
+        }
+
         .header {
             width: 1000px;
             max-width: 95%;
@@ -44,7 +69,6 @@
             backdrop-filter: blur(5px);
         }
 
-        /* Main Heading */
         h2 {
             color: #002147;
             margin-bottom: 5px;
@@ -52,7 +76,6 @@
             letter-spacing: 1px;
         }
 
-        /* Input */
         input {
             width: 90%;
             max-width: 450px;
@@ -68,13 +91,11 @@
             box-sizing: border-box;
         }
 
-        /* Input border when selected */
         input:focus {
             outline: none;
             border: 2px solid beige
         }
 
-        /* Submit button */
         button {
             margin-top: 15px;
             padding: 12px 35px;
@@ -87,12 +108,11 @@
             letter-spacing: 1px;
         }
 
-        /* Submit button changes color when hovered */
+
         button:hover {
             background-color: #000080;
         }
 
-        /* Give the element details */
         #details {
             width: 90%;
             max-width: 600px;
@@ -126,25 +146,30 @@
     </style>
 <body>
 
+    <nav class="navbar">
+        <a href="01_homepage.html">Homepage</a>
+        <a href="05_members.html">School Club Members</a>
+        <a href="07_creator.html">Meet the Creator</a>
+    </nav>
+
+    <br><br>
+
     <div class="header">
     <h2>Periodic Table Information Finder (Non-metals)</h2>
     </div>
-    <br><br>
 
-     <!--Input box for the element symbol-->
+    <br><br><br><br>
+
     <input type="text" id="text1" placeholder="Enter your Element Symbol">
     <br><br>
 
-    <!--Check Button-->
     <button type="button" py-click="enter">Check Details</button>
     <br><br>
 
-     <!--Details display area-->
     <div id="details" class="details">
         <h3>Element Details</h3>
     </div>
 
-    <!--Connect the HTML webpage to the Python-->
     <script type="py" src="04_elements.py"></script>
     
 </body>

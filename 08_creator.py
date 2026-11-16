@@ -31,9 +31,9 @@ dreams = [
 ]
 
 favorites = {
-    'Food': 'Instant Noodles',
-    'Color': 'Pink',
-    'Singer/Artist': 'Taylor Swift',
+    'Food': ' Instant Noodles',
+    'Color': ' Pink',
+    'Singer/Artist': ' Taylor Swift',
 }
 
 favorite_activities = {
