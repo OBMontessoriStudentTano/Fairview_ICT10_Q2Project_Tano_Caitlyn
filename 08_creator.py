@@ -51,7 +51,7 @@ favorite_activities = {
 # Stores personal information
 about_me = {
     'Birthday': 'Sept. 7, 2011',
-    'Nationality': 'Filipino',
+    'Nationality': 'Filipino (With Chinese and Spanish ancestry)',
     'Zodiac Sign': 'Virgo',
     'Mbti personality': 'ENFP',
 }
